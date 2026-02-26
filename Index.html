@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Mascotas</title>
+<link rel="stylesheet" href="index.css">
+<script defer src="index.js"></script>
+</head>
+
+<body>
+
+<h2>🐶 PetShop Pro</h2>
+  <button class="cart-btn" id="cartBtn">
+    🛒 Carrito
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<div class="container">
+  <div class="products" id="productList"></div>
+</div>
+
+<div id="modal-parent" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:1000;">
+  <div class="modal-bg" style="position:absolute;top:0;left:0;width:100vw;height:100vh;background:rgba(255,255,255,0.7);"></div>
+  <div class="cart-modal" id="cartModal" style="display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1001; background-color: white; padding: 15px; border: 1px solid gray; border-radius: 20px;">
+    <div class="cart-header">
+      <h3>Carrito</h3>
+      <button aria-label="Cerrar carrito" class="close-modal" onclick="toggleCart()" style="position:relative;top:0px;right:15px;font-size:1.5rem;background:none;border:none;cursor:pointer;">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="subtotal" id="subtotal"></div>
+  </div>
+</div>
+</html>
